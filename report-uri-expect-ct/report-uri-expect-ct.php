@@ -54,9 +54,9 @@ elseif ($_SERVER['REQUEST_METHOD'] == 'POST'
     //Grab the headers, too
     $headers = var_export(getallheaders(), true);
 
-    //Build a message
+    //Build a message - gethostbyaddr
     $body = <<<EOT
-An Expect-CT report was posted by {$_SERVER['REMOTE_ADDR']}.
+An Expect-CT report was posted by {$_SERVER['REMOTE_ADDR']} on {$_SERVER['SERVER_NAME']}.
 
 Headers follow:
 
@@ -73,3 +73,5 @@ EOT;
         $body, 'From: ' . ADMIN_EMAIL);
     exit;
 }
+
+?>
