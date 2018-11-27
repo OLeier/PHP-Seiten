@@ -19,9 +19,17 @@ In einem Kommentar wurde auf Sicherheitslücken hingewiesen:
   -> `htmlentities`
 
 
-## report-uri-expect-ct.php ##
+## report-uri-expect-ct ##
 
 Um die Fälschung von Zertifikaten zu verhindern, benötigen wir [Certificate Transparency](https://de.wikipedia.org/wiki/Certificate_Transparency "Certificate Transparency"). Ein Browser kann somit die Echtheit von Zertifikaten überprüfen. Über die report-uri können Fehler an die Web-Site gemeldet werden.
+
+
+## report-uri-csp ##
+
+[Content Security Policy (CSP)](https://de.wikipedia.org/wiki/Content_Security_Policy "Content Security Policy") - ein Verfahren zur Vorbeugung gegen XSS-Angriffe.
+
+Verstöße gegen die von der WebSite selbst aufgestellte Policy, kann der Browser an diesen Report senden.
+
 
 
 ----------
